@@ -21,7 +21,7 @@ router.get('/get-info/:city', async (req, res) => {
 
         const response = await axios.get(url);
         console.log(response);
-        // return res.json(response.data);
+        return res.json(response.data);
     }catch(error){
         console.log(error);
         res.json({message: error});
